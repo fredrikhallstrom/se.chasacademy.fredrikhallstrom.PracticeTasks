@@ -1,7 +1,7 @@
 package se.chasacademy.PracticeTasks.taskLibrary;
 
 public class Convert_string_to_digit {
-    void start() {
+    public static void start() {
         String input_String = IO.readln("Give me a number to increment:\n");
 
         int number = Integer.parseInt(input_String); // Convert from text to integer

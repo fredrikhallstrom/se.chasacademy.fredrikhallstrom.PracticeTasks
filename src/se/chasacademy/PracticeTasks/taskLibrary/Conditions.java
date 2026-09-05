@@ -1,7 +1,7 @@
 package se.chasacademy.PracticeTasks.taskLibrary;
 
 public class Conditions {
-    void start() {
+    public static void start() {
         String input = IO.readln("Give me a number less than zero:\n");
         int number = Integer.parseInt(input); //Convert to integer
 

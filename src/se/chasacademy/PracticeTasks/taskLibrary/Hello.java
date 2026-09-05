@@ -1,7 +1,7 @@
 package se.chasacademy.PracticeTasks.taskLibrary;
 
 public class Hello {
-    void start() {
+    public static void start() {
         IO.println("Hello World");
     }
 }
