@@ -7,6 +7,7 @@ import java.io.IOException;
 // Import new practices here when using other than taskLibrary
 import se.chasacademy.PracticeTasks.taskLibrary.ClassForBook.ClassForBook;
 import se.chasacademy.PracticeTasks.taskLibrary.FindLongestString.FindLongestString;
+import se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry.MemberRegistry;
 import se.chasacademy.PracticeTasks.taskLibrary.MethodsAndPassByValue.MethodsAndPassByValue;
 import se.chasacademy.PracticeTasks.taskLibrary.SimpleMenu.SimpleMenu;
 import se.chasacademy.PracticeTasks.taskLibrary.WeatherReport.WeatherReport;
@@ -21,6 +22,7 @@ public enum Tasks {
     SIMPLEMENU(2,"Enkel meny med while-loop", SimpleMenu.class),
     CLASSFORBOOK(2, "Klass för bok", ClassForBook.class),
     METHODSANDPASSBYVALUE(2, "Metoder och pass-by-value", MethodsAndPassByValue.class),
+    MEMBERREGISTRY(2, "Medlemsregistret", MemberRegistry.class),
 
     ;
 
