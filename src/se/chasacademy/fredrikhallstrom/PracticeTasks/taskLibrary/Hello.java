@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary;
 
 public class Hello {
     public static void start() {

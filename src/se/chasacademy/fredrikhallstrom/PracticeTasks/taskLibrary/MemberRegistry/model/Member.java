@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry.model;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.model;
 
 public class Member {
     private String name;

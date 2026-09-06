@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary.ClassForBook;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.ClassForBook;
 
 public class Book {
     private final String title;

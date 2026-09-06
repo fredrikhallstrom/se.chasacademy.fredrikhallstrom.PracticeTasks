@@ -1,6 +1,6 @@
-package se.chasacademy.PracticeTasks.taskLibrary.SimpleMenu;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.SimpleMenu;
 
-import se.chasacademy.PracticeTasks.Helpers;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.Helpers;
 
 public class SimpleMenu {
     public static void start() {

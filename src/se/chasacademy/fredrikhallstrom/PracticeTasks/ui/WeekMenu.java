@@ -1,7 +1,7 @@
-package se.chasacademy.PracticeTasks.ui;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.ui;
 
-import se.chasacademy.PracticeTasks.Helpers;
-import se.chasacademy.PracticeTasks.taskLibrary.Tasks;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.Helpers;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Tasks;
 import java.util.ArrayList;
 import java.util.List;
 

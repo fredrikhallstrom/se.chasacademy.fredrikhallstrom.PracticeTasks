@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary.WeatherReport;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.WeatherReport;
 
 public class WeatherReport {
     public static void start() {

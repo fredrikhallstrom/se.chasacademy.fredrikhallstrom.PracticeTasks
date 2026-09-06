@@ -1,7 +1,7 @@
-package se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry;
 
-import se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry.model.Member;
-import se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry.model.MembershipStatus;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.model.Member;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.model.MembershipStatus;
 
 public class MemberRegistry {
     public static void start() {

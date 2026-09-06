@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary.MethodsAndPassByValue;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MethodsAndPassByValue;
 
 public class Person {
     private String name;

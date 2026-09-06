@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks;
+package se.chasacademy.fredrikhallstrom.PracticeTasks;
 
 public class Helpers {
     public static int readlnStrToInt(String prompt) {

@@ -1,16 +1,16 @@
-package se.chasacademy.PracticeTasks.taskLibrary;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary;
 
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.*;
 import java.io.IOException;
 
 // Import new practices here when using other than taskLibrary
-import se.chasacademy.PracticeTasks.taskLibrary.ClassForBook.ClassForBook;
-import se.chasacademy.PracticeTasks.taskLibrary.FindLongestString.FindLongestString;
-import se.chasacademy.PracticeTasks.taskLibrary.MemberRegistry.MemberRegistry;
-import se.chasacademy.PracticeTasks.taskLibrary.MethodsAndPassByValue.MethodsAndPassByValue;
-import se.chasacademy.PracticeTasks.taskLibrary.SimpleMenu.SimpleMenu;
-import se.chasacademy.PracticeTasks.taskLibrary.WeatherReport.WeatherReport;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.ClassForBook.ClassForBook;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.FindLongestString.FindLongestString;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.MemberRegistry;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MethodsAndPassByValue.MethodsAndPassByValue;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.SimpleMenu.SimpleMenu;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.WeatherReport.WeatherReport;
 
 public enum Tasks {
     HELLO(1, "Hello World", Hello.class),

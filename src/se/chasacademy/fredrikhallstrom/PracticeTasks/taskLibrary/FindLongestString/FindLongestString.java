@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary.FindLongestString;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.FindLongestString;
 
 public class FindLongestString {
     public static void start() {

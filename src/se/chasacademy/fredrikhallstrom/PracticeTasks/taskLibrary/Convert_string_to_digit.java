@@ -1,4 +1,4 @@
-package se.chasacademy.PracticeTasks.taskLibrary;
+package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary;
 
 public class Convert_string_to_digit {
     public static void start() {
