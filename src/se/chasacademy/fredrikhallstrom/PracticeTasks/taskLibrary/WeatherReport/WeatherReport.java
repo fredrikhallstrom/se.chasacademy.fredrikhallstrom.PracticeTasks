@@ -1,7 +1,10 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.WeatherReport;
 
-public class WeatherReport {
-    public static void start() {
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.TaskTemplate;
+
+public class WeatherReport implements TaskTemplate {
+    @Override
+    public void start() {
         Weather nowWeather = Weather.SUNNY;
 
         switch (nowWeather) {

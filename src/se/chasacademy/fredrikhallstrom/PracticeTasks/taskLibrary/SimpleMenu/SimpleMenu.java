@@ -1,9 +1,11 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.SimpleMenu;
 
 import se.chasacademy.fredrikhallstrom.PracticeTasks.Helpers;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.TaskTemplate;
 
-public class SimpleMenu {
-    public static void start() {
+public class SimpleMenu implements TaskTemplate {
+    @Override
+    public void start() {
         while(true) {
             IO.println("""
                     1. Skriv ut en hälsning

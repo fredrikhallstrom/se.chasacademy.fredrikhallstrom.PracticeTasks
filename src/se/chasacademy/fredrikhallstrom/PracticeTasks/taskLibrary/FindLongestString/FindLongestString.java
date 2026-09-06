@@ -1,7 +1,10 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.FindLongestString;
 
-public class FindLongestString {
-    public static void start() {
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.TaskTemplate;
+
+public class FindLongestString implements TaskTemplate {
+    @Override
+    public void start() {
         String[] names = {
                 "Alexander",
                 "Benjamin",

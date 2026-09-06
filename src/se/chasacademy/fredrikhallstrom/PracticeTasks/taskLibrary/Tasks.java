@@ -1,16 +1,22 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary;
 
-import java.lang.reflect.InvocationTargetException;
-import java.nio.file.*;
-import java.io.IOException;
-
-// Import new practices here when using other than taskLibrary
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.ClassForBook.ClassForBook;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Conditions.Conditions;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Convert_string_to_digit.Convert_string_to_digit;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.FindLongestString.FindLongestString;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Handle_Input.Handle_Input;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Hello.Hello;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.MemberRegistry;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MethodsAndPassByValue.MethodsAndPassByValue;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.SimpleMenu.SimpleMenu;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.WeatherReport.WeatherReport;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+// Import new practices here
+
 
 public enum Tasks {
     HELLO(1, "Hello World", Hello.class),
@@ -27,24 +33,25 @@ public enum Tasks {
     ;
 
     private final String displayName;
-    private final Class<?> submenuClass;
+    private final Class<? extends TaskTemplate> submenuClass;
     private final int studyWeek;
 
-    Tasks(int studyweek, String displayName, Class<?> submenuClass) {
-        this.studyWeek = studyweek;
+    Tasks(int studyWeek, String displayName, Class<? extends TaskTemplate> submenuClass) {
+        this.studyWeek = studyWeek;
         this.displayName = displayName;
         this.submenuClass = submenuClass;
     }
 
     public void start() {
         try {
-            submenuClass.getMethod("start").invoke(null);
-        } catch (InvocationTargetException e) {
-            IO.println("Uppgiften kraschade. ");
-            e.getCause().printStackTrace();
-        } catch (ReflectiveOperationException e) {
-            IO.println("Felaktigt angedd övningsuppgift");
+            submenuClass.getDeclaredConstructor().newInstance().start();
+        } catch(ReflectiveOperationException e){
+            IO.println("Felaktigt angiven övningsuppgift");
+        } catch (RuntimeException e) {
+            IO.println("Uppgiften kraschade.");
+            e.printStackTrace();
         }
+
     }
 
     public String getDisplayName() {

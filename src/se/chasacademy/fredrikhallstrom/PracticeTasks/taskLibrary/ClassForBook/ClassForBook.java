@@ -1,7 +1,10 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.ClassForBook;
 
-public class ClassForBook {
-    public static void start() {
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.TaskTemplate;
+
+public class ClassForBook implements TaskTemplate {
+    @Override
+    public void start() {
         Book[] books = {
                 new Book("Spill", "Sigrid Combuchen"),
                 new Book("Kallocain", "Karin Boye"),

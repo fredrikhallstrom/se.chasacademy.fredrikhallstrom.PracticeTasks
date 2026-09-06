@@ -2,13 +2,11 @@ package se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry
 
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.model.Member;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.MemberRegistry.model.MembershipStatus;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.TaskTemplate;
 
-public class MemberRegistry {
-    public static void start() {
-        new MemberRegistry().run();
-    }
-
-    void run() {
+public class MemberRegistry implements TaskTemplate {
+    @Override
+    public void start() {
         Member[] members = new Member[5];
         members[0] = new Member("Alexander", 25, MembershipStatus.ACTIVE);
         members[2] = new Member("Sonny", 26, MembershipStatus.PAUSED);
