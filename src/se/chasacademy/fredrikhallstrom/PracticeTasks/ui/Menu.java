@@ -1,7 +1,7 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.ui;
 
-import se.chasacademy.fredrikhallstrom.PracticeTasks.Helpers;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.taskLibrary.Tasks;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.util.Helpers;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Tasks;
 
 public class Menu {
 
