@@ -7,9 +7,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConfeerenceAndDates implements TaskTemplate {
+public class ConferenceAndDates implements TaskTemplate {
     public void start() {
-        List<Conference> confs = new ArrayList<Conference>();
+        List<Conference> confs = new ArrayList<>();
 
         confs.add(new Conference("DataVetenskap", LocalDate.of(2026, 8, 12)));
         confs.add(new Conference("IT", LocalDate.of(2026, 12, 12)));

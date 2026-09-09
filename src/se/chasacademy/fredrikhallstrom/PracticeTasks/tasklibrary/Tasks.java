@@ -16,9 +16,10 @@ import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.Notificat
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.PaymentSystem.PaymentSystem;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.VehiclesAndSuper.VehiclesAndSuper;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.CoffeeMachineAndInvariants.CoffeeMachineAndInvariants;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.ConferenceAndDates.ConfeerenceAndDates;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.ConferenceAndDates.ConferenceAndDates;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.MoviesWithCollections.MoviesWithCollections;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.RocketLaunchAndExceptions.RocketLaunchAndExceptions;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.WeatherWarningsWithCollAndSOLID.WeatherWarningsWithCollAndSOLID;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,40 +32,51 @@ import java.util.stream.Stream;
 
 
 public enum Tasks {
+    // Week 1
     HELLO(1, "Hello World", Hello.class),
     HANDLE_INPUT(1, "Inmatningshantering", Handle_Input.class),
     CONDITIONS(1, "Villkor", Conditions.class),
     CONVERT_STRING_TO_DIGIT(1,"Konvertera Sträng till Tal", Convert_string_to_digit.class),
+
+    // Week 2
     WEATHERREPORT(2,"Väderrapport", WeatherReport.class),
     FINDLONGESTSTRING(2, "Hitta det längsta namnet", FindLongestString.class),
     SIMPLEMENU(2,"Enkel meny med while-loop", SimpleMenu.class),
     CLASSFORBOOK(2, "Klass för bok", ClassForBook.class),
     METHODSANDPASSBYVALUE(2, "Metoder och pass-by-value", MethodsAndPassByValue.class),
     MEMBERREGISTRY(2, "Medlemsregistret", MemberRegistry.class),
+
+    // Week 3
     ANIMALSANDINHERTIS(3,"Djur och Arv", AnimalsAndInherits.class),
     VEHICLEANDSUPER(3, "Fordon och super", VehiclesAndSuper.class),
     NOTIFICATIONS(3, "Notifieringar", Notifications.class),
     PAYMENTSYSTEM(3, "Betalsystem", PaymentSystem.class),
     LIBRARYANDCOMPOSITION(3, "Bibliotek och komposition", LibraryAndComposition.class),
+
+    // Week 4
     ROCKETLAUNCHANDEXCEPTIONS(4, "Raketuppskjutning och undantag", RocketLaunchAndExceptions.class),
     COFFEEMACHINEANDINVARIANTS(4, "Kaffemaskin och invariants", CoffeeMachineAndInvariants.class),
     MOVIESWITHCOLLECTIONS(4, "Filmregister med Collections", MoviesWithCollections.class),
-    CONFERENCEANDDATES(4, "Konferenser och datum", ConfeerenceAndDates.class)
+    CONFERENCEANDDATES(4, "Konferenser och datum", ConferenceAndDates.class),
+    WEATHERWARNINGSWITHCOLLANDSOLID(4,"Vädervarningar med Collections och SOLID",
+            WeatherWarningsWithCollAndSOLID.class),
+
+    // Week 5
     ;
 
     private final String displayName;
-    private final Class<? extends TaskTemplate> submenuClass;
+    private final Class<? extends TaskTemplate> taskClass;
     private final int studyWeek;
 
-    Tasks(int studyWeek, String displayName, Class<? extends TaskTemplate> submenuClass) {
+    Tasks(int studyWeek, String displayName, Class<? extends TaskTemplate> taskClass) {
         this.studyWeek = studyWeek;
         this.displayName = displayName;
-        this.submenuClass = submenuClass;
+        this.taskClass = taskClass;
     }
 
     public void start() {
         try {
-            submenuClass.getDeclaredConstructor().newInstance().start();
+            taskClass.getDeclaredConstructor().newInstance().start();
         } catch(ReflectiveOperationException e){
             IO.println("Felaktigt angiven övningsuppgift");
         } catch (RuntimeException e) {
@@ -79,7 +91,7 @@ public enum Tasks {
     }
 
     public String getCode() throws IOException {
-        Path taskDirectory = Path.of("src", submenuClass.getPackageName().replace(".", "/"));
+        Path taskDirectory = Path.of("src", taskClass.getPackageName().replace(".", "/"));
         StringBuilder filesToPrint = new StringBuilder();
         try (Stream<Path> paths = Files.walk(taskDirectory)) {
             for (Path file : paths.filter(p -> p.toString().endsWith(".java")).sorted().toList()) {
@@ -97,7 +109,7 @@ public enum Tasks {
 
     public String getReflections() {
         try {
-            return submenuClass.getDeclaredConstructor().newInstance().getReflections();
+            return taskClass.getDeclaredConstructor().newInstance().getReflections();
         } catch (ReflectiveOperationException e) {
             return "Kunde inte läsa uppgiftens reflektioner.";
         } catch (IOException e) {
