@@ -1,25 +1,31 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary;
 
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.AnimalsAndInherits.AnimalsAndInherits;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.ClassForBook.ClassForBook;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week1.Conditions.Conditions;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week1.Convert_string_to_digit.Convert_string_to_digit;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.FindLongestString.FindLongestString;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week1.Handle_Input.Handle_Input;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week1.Hello.Hello;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.LibraryAndComposition.LibraryAndComposition;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.ClassForBook.ClassForBook;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.FindLongestString.FindLongestString;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.MemberRegistry.MemberRegistry;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.MethodsAndPassByValue.MethodsAndPassByValue;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.SimpleMenu.SimpleMenu;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.WeatherReport.WeatherReport;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.AnimalsAndInherits.AnimalsAndInherits;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.LibraryAndComposition.LibraryAndComposition;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.Notifications.Notifications;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.PaymentSystem.PaymentSystem;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.SimpleMenu.SimpleMenu;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.VehiclesAndSuper.VehiclesAndSuper;
-import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.WeatherReport.WeatherReport;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.CoffeeMachineAndInvariants.CoffeeMachineAndInvariants;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.ConferenceAndDates.ConfeerenceAndDates;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.MoviesWithCollections.MoviesWithCollections;
+import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.RocketLaunchAndExceptions.RocketLaunchAndExceptions;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
+
+/// ///
 
 // Import new practices here
 
@@ -39,7 +45,11 @@ public enum Tasks {
     VEHICLEANDSUPER(3, "Fordon och super", VehiclesAndSuper.class),
     NOTIFICATIONS(3, "Notifieringar", Notifications.class),
     PAYMENTSYSTEM(3, "Betalsystem", PaymentSystem.class),
-    LIBRARYANDCOMPOSITION(3, "Bibliotek och komposition", LibraryAndComposition.class)
+    LIBRARYANDCOMPOSITION(3, "Bibliotek och komposition", LibraryAndComposition.class),
+    ROCKETLAUNCHANDEXCEPTIONS(4, "Raketuppskjutning och undantag", RocketLaunchAndExceptions.class),
+    COFFEEMACHINEANDINVARIANTS(4, "Kaffemaskin och invariants", CoffeeMachineAndInvariants.class),
+    MOVIESWITHCOLLECTIONS(4, "Filmregister med Collections", MoviesWithCollections.class),
+    CONFERENCEANDDATES(4, "Konferenser och datum", ConfeerenceAndDates.class)
     ;
 
     private final String displayName;
