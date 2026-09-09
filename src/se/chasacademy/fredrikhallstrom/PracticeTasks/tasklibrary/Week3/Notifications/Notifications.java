@@ -11,14 +11,14 @@ import java.util.List;
 
 public class Notifications implements TaskTemplate {
     public void start() {
-        List<Notifier> notifications = new ArrayList<Notifier>();
+        List<Notifier> notifications = new ArrayList<>();
 
         notifications.add(new EmailNotifier());
         notifications.add(new SmsNotifier());
         notifications.add(new PushNotifier());
 
         for (Notifier notifier : notifications) {
-            IO.print(notifier + "\n");
+            notifier.sendNotification();
         }
     }
 }

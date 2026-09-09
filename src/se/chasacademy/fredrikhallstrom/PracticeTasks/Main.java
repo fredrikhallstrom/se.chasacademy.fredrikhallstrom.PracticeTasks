@@ -1,5 +1,10 @@
+import se.chasacademy.fredrikhallstrom.PracticeTasks.Exceptions.NoInputException;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.ui.Menu;
 
 void main() {
-    Menu.mainMenu();
+    try {
+        Menu.mainMenu();
+    } catch (NoInputException e) {
+        IO.println("Programmet avslutas!!");
+    }
 }

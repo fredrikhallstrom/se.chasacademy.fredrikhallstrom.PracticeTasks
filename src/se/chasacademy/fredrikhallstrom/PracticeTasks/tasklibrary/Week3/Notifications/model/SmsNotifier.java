@@ -3,9 +3,7 @@ package se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week3.Notifica
 public class SmsNotifier implements Notifier {
 
     @Override
-    public void sendNotification() {}
-
-    public String toString() {
-        return "SMS Sänt!!";
+    public void sendNotification() {
+        IO.println("SMS Sänt!!");
     }
 }

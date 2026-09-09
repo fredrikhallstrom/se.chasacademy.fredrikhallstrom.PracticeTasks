@@ -22,11 +22,10 @@ import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.RocketLau
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week4.WeatherWarningsWithCollAndSOLID.WeatherWarningsWithCollAndSOLID;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
 
-/// ///
+// // // //
 
 // Import new practices here
 
@@ -74,16 +73,8 @@ public enum Tasks {
         this.taskClass = taskClass;
     }
 
-    public void start() {
-        try {
+    public void start() throws ReflectiveOperationException {
             taskClass.getDeclaredConstructor().newInstance().start();
-        } catch(ReflectiveOperationException e){
-            IO.println("Felaktigt angiven övningsuppgift");
-        } catch (RuntimeException e) {
-            IO.println("Uppgiften kraschade.");
-            e.printStackTrace();
-        }
-
     }
 
     public String getDisplayName() {
@@ -91,30 +82,35 @@ public enum Tasks {
     }
 
     public String getCode() throws IOException {
-        Path taskDirectory = Path.of("src", taskClass.getPackageName().replace(".", "/"));
-        StringBuilder filesToPrint = new StringBuilder();
-        try (Stream<Path> paths = Files.walk(taskDirectory)) {
-            for (Path file : paths.filter(p -> p.toString().endsWith(".java")).sorted().toList()) {
-                filesToPrint.append("---- ").append(taskDirectory.relativize(file)).append(" ----\n");
-                filesToPrint.append(Files.readString(file).stripTrailing()).append("\n\n");
+        return TaskCodeReader.getCode(taskClass);
+    }
+
+    public static int highestStudyWeek() {
+        int highestWeek = 0;
+        for (Tasks task : Tasks.values()) {
+            if (task.getStudyWeek() > highestWeek) {
+                highestWeek = task.getStudyWeek();
             }
         }
+        return highestWeek;
+    }
 
-        return filesToPrint.toString().stripTrailing();
+    public static List<Tasks> tasksByWeek(int week) {
+        List<Tasks> tasks = new ArrayList<>();
+        for (Tasks iterTask : Tasks.values()) {  // Creates array with possible practicetaks
+            if (iterTask.getStudyWeek() == week) {
+                tasks.add(iterTask);
+            }
+        }
+        return tasks;
     }
 
     public int getStudyWeek() {
         return studyWeek;
     }
 
-    public String getReflections() {
-        try {
-            return taskClass.getDeclaredConstructor().newInstance().getReflections();
-        } catch (ReflectiveOperationException e) {
-            return "Kunde inte läsa uppgiftens reflektioner.";
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public String getReflections() throws IOException {
+            return TaskReflectionReader.getReflections(taskClass);
     }
 }
 

@@ -1,11 +1,10 @@
 package se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.Week2.SimpleMenu;
 
-import se.chasacademy.fredrikhallstrom.PracticeTasks.util.Helpers;
 import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.TaskTemplate;
 
 public class SimpleMenu implements TaskTemplate {
     @Override
-    public void start() {
+    public void start()  {
         while(true) {
             IO.println("""
                     1. Skriv ut en hälsning
@@ -24,7 +23,7 @@ public class SimpleMenu implements TaskTemplate {
 
     private static void countSqareOfDigit() {
         IO.println("Låt mig beräkna kvadraten av ett tal!");
-        double dblInput = Helpers.readlnStrToDouble("Välj ett tal:");
+        double dblInput = Double.parseDouble(IO.readln("Välj ett tal:"));
         double dblSum = dblInput * dblInput;
         IO.println(String.format("Kvadraten av %.2f är %.2f, easy peasy :-D",  dblInput, dblSum));
         IO.readln("Tryck Enter för att fortsätta...");
