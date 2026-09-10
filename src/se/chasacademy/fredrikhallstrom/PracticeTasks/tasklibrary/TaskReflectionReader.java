@@ -13,7 +13,7 @@ public class TaskReflectionReader {
         try {
             return Files.readString(file).stripTrailing();
         } catch (NoSuchFileException e) {
-            return "Inga reflektionsanteckningar finns för den här uppgiften.\n";
+            return "Inga reflektionsanteckningar finns för den här uppgiften.";
         }
     }
 }
