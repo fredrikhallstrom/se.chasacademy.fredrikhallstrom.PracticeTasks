@@ -8,7 +8,7 @@ import java.nio.file.Path;
 public class TaskReflectionReader {
     private TaskReflectionReader() {} // Stänger konstruktor
 
-    public static String getReflections(Class<?> taskClass) throws IOException {
+    public static String getReflections(Class<? extends TaskTemplate> taskClass) throws IOException {
         Path file = Path.of("src", taskClass.getPackageName().replace(".", "/") + "/Reflections.md");
         try {
             return Files.readString(file).stripTrailing();

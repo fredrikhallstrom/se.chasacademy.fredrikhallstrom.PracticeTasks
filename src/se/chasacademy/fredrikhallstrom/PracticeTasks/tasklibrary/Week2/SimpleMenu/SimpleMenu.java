@@ -4,7 +4,7 @@ import se.chasacademy.fredrikhallstrom.PracticeTasks.tasklibrary.TaskTemplate;
 
 public class SimpleMenu implements TaskTemplate {
     @Override
-    public void start()  {
+    public void start() {
         while(true) {
             IO.println("""
                     1. Skriv ut en hälsning

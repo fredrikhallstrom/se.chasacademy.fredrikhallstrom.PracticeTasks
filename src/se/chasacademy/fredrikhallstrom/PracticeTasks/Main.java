@@ -5,6 +5,6 @@ void main() {
     try {
         Menu.mainMenu();
     } catch (NoInputException e) {
-        IO.println("Programmet avslutas!!");
+        IO.println(e.getMessage());
     }
 }
